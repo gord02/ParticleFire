@@ -3,23 +3,21 @@
 
 #include "Particle.h"
 
-namespace gordon{
+namespace gordon {
 
-	class Swarm{
-	public:
-	const static int NPARTICLES = 4000; //number of partilces
-
-	private:
+class Swarm {
+private:
 	Particle * m_pParticles;
 	int lastTime;
-	public:
+
+public:
 	Swarm();
 	virtual ~Swarm();
-	void update(int elapsed);//added
-
+	void update(int elapsed);
+	const static int NPARTICLES = 4000; // number of partilces
 	const Particle * const getParticles() {return m_pParticles;};
+};
 
-
-	};
 }
+
 #endif
